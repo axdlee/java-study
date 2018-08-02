@@ -11,17 +11,6 @@
         </webroots>
       </configuration>
     </facet>
-    <facet type="hibernate" name="Hibernate">
-      <configuration>
-        <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="74293af6-cc11-4bff-819f-1a4c83014feb" />
-          <unit-entry name="out:production:hibernate:hibernate.cfg.xml" value="14a0ca80-a6f8-400b-ad7b-7d07f6ec66b1" />
-        </datasource-map>
-        <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/out/production/hibernate/hibernate.cfg.xml" />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -30,6 +19,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="hibernate-lib" level="project" />
+    <orderEntry type="library" name="springmvc-lib" level="project" />
   </component>
 </module>
