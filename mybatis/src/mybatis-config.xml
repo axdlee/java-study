@@ -22,5 +22,10 @@
         <mapper resource="com/yeelight/pojo/Product.xml"/>
         <mapper resource="com/yeelight/pojo/Order.xml"/>
         <mapper resource="com/yeelight/pojo/OrderItem.xml"/>
+
+        <mapper class="com.yeelight.mapper.CategoryMapper"/>
+        <mapper class="com.yeelight.mapper.ProductMapper"/>
+        <mapper class="com.yeelight.mapper.OrderMapper"/>
+        <mapper class="com.yeelight.mapper.OrderItemMapper"/>
     </mappers>
 </configuration>
