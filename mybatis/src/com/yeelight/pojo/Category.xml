@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yeelight.pojo">
+    <cache/>
     <insert id="addCategory" parameterType="Category">
         INSERT INTO category_ (name) values (#{name})
     </insert>
@@ -17,6 +18,9 @@
     </update>
     <select id="listCategory" resultType="Category">
         SELECT * FROM category_
+        <if test="start != null and count != null">
+          limit #{start}, #{count}
+        </if>
     </select>
     <select id="listCategoryByName" parameterType="string" resultType="Category">
       SELECT * FROM category_ WHERE name LIKE concat('%', #{0}, '%')

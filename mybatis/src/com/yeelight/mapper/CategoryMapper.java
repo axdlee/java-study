@@ -16,11 +16,9 @@ import java.util.List;
  * @link https://www.yeelight.com
  */
 public interface CategoryMapper {
-    @Insert(" insert into category_ ( name ) values (#{name}) ")
     @InsertProvider(type = CategoryDynaSqlProvider.class, method = "add")
     public int add(Category category);
 
-    @Delete(" delete from category_ where id = #{id} ")
     @InsertProvider(type = CategoryDynaSqlProvider.class, method = "delete")
     public void delete(int id);
 
@@ -38,4 +36,7 @@ public interface CategoryMapper {
             ))
     })
     public List<Category> list();
+
+    @Select(" select * from category_ limit #{start},#{count} ")
+    public List<Category> listByPage(@Param("start") int start, @Param("count") int count);
 }

@@ -1,5 +1,6 @@
 package com.yeelight.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  * @author Sheldon Lee <xdlee110@gmail.com>
  * @link https://www.yeelight.com
  */
-public class Category {
+public class Category implements Serializable {
     private int id;
     private String name;
     List<Product> products;
