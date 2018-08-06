@@ -23,7 +23,7 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext.xml")
 public class MybatisTest {
-    @Autowired
+    /*@Autowired
     private CategoryMapper categoryMapper;
 
     // @Test
@@ -51,5 +51,5 @@ public class MybatisTest {
              ) {
             System.out.println(c.getName());
         }
-    }
+    }*/
 }

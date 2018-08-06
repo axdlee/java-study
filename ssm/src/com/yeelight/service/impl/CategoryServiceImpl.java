@@ -27,15 +27,4 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> list() {
         return categoryMapper.list();
     }
-
-    @Override
-    public int total() {
-        return categoryMapper.total();
-    }
-
-    @Override
-    public List<Category> list(Page page) {
-        // TODO Auto-generated method stub
-        return categoryMapper.list(page);
-    }
 }
