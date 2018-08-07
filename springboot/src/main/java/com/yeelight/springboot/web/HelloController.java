@@ -22,6 +22,7 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello(Model m) throws Exception {
         m.addAttribute("now", DateFormat.getDateTimeInstance().format(new Date()));
+        m.addAttribute("name", "thymeleaf");
         /*if(true){
             throw new Exception("some exception");
         }*/

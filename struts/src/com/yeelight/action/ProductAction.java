@@ -5,8 +5,8 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.yeelight.bean.Product;
 import org.apache.struts2.ServletActionContext;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+//import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
@@ -22,13 +22,14 @@ public class ProductAction extends ActionSupport {
     private Product product;
 
     public String show() {
-        HttpServletRequest request = ServletActionContext.getRequest();
+        /*HttpServletRequest request = ServletActionContext.getRequest();
         HttpServletResponse response = ServletActionContext.getResponse();
         System.out.println("request:\t" + request);
         System.out.println("response:\t" + response);
 
         product = new Product();
         product.setName("iphone7");
+        */
         return "show";
     }
 
