@@ -1,7 +1,11 @@
 package com.yeelight.springboot.web;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 /**
  * Created by Sheldon
@@ -12,11 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Sheldon Lee <xdlee110@gmail.com>
  * @link https://www.yeelight.com
  */
-@RestController
+@Controller
 public class HelloController {
 
     @RequestMapping("/hello")
-    public String hello() {
-        return "Hello Spring boot";
+    public String hello(Model m) throws Exception {
+        m.addAttribute("now", DateFormat.getDateTimeInstance().format(new Date()));
+        /*if(true){
+            throw new Exception("some exception");
+        }*/
+        return "hello";
     }
 }
